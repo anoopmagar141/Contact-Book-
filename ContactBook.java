@@ -80,3 +80,18 @@ class ContactBookManager {
             System.out.println(contact);
         }
     }
+
+    private void searchContact() {
+        System.out.print("Enter name to search: ");
+        String name = scanner.nextLine();
+        boolean found = false;
+        for (Contact contact : contacts) {
+            if (contact.getName().equalsIgnoreCase(name)) {
+                System.out.println(contact);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Contact not found.");
+        }
+    }
