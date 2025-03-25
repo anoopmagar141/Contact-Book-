@@ -1,3 +1,14 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class ContactBookManager {
+    private ArrayList<Contact> contacts = new ArrayList<>();
+
+    public void start() {
+        System.out.println("Contact Book Manager Initialized.");
+    }
+}
+
 public class ContactBook {
     public static void main(String[] args) {
         System.out.println("Welcome to Contact Book!");
