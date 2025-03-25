@@ -69,3 +69,14 @@ class ContactBookManager {
         contacts.add(new Contact(name, phone, email));
         System.out.println("Contact added successfully!");
     }
+
+    private void viewContacts() {
+        if (contacts.isEmpty()) {
+            System.out.println("No contacts found.");
+            return;
+        }
+        System.out.println("\nContact List:");
+        for (Contact contact : contacts) {
+            System.out.println(contact);
+        }
+    }
