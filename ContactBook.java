@@ -107,3 +107,10 @@ class ContactBookManager {
         }
     }
 }
+
+public class ContactBook {
+    public static void main(String[] args) {
+        ContactBookManager manager = new ContactBookManager();
+        manager.start();
+    }
+}
