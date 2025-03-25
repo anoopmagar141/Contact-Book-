@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 class ContactBookManager {
     private ArrayList<Contact> contacts = new ArrayList<>();
 
@@ -30,5 +31,21 @@ class Contact {
     @Override
     public String toString() {
         return "Name: " + name + " | Phone: " + phone + " | Email: " + email;
+    }
+}
+ {
+    private ArrayList<Contact> contacts = new ArrayList<>();
+    private Scanner scanner = new Scanner(System.in);
+
+    public void addContact() {
+        System.out.print("Enter Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter Phone: ");
+        String phone = scanner.nextLine();
+        System.out.print("Enter Email: ");
+        String email = scanner.nextLine();
+
+        contacts.add(new Contact(name, phone, email));
+        System.out.println("Contact added successfully!");
     }
 }
