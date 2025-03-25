@@ -95,3 +95,15 @@ class ContactBookManager {
             System.out.println("Contact not found.");
         }
     }
+
+    private void deleteContact() {
+        System.out.print("Enter name to delete: ");
+        String name = scanner.nextLine();
+        boolean removed = contacts.removeIf(contact -> contact.getName().equalsIgnoreCase(name));
+        if (removed) {
+            System.out.println("Contact deleted successfully!");
+        } else {
+            System.out.println("Contact not found.");
+        }
+    }
+}
